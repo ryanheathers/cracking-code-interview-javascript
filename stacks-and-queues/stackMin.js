@@ -1,6 +1,6 @@
 'use strict';
-let StackNode = require('./Stack').StackNode;
-let Stack = require('./Stack').Stack;
+const StackNode = require('./Stack').StackNode;
+const Stack = require('./Stack').Stack;
 
 class StackNodeWithMin extends StackNode {
   constructor(data, min) {
@@ -14,7 +14,6 @@ class StackWithMin extends Stack {
     super();
   }
   push(data) {
-    debugger;
     let newMin = Math.min(data, this.min());
     const node = new StackNodeWithMin(data, newMin);
     node.next = this.top;

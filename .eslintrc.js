@@ -111,7 +111,7 @@ module.exports = {
     "indent": [2, 2],                // http://eslint.org/docs/rules/indent
     "brace-style": [
       2,               // http://eslint.org/docs/rules/brace-style
-      "1tbs", {
+      "stroustrup", {
         "allowSingleLine": true
       }
     ],

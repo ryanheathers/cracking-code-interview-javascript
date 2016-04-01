@@ -31,7 +31,7 @@ LinkedList.prototype.add = function(value) {
   this._length++;
 
   return node;
-}
+};
 
 LinkedList.prototype.searchAt = function(position) {
   let current = this.head;
@@ -50,7 +50,7 @@ LinkedList.prototype.searchAt = function(position) {
   }
 
   return current;
-}
+};
 
 LinkedList.prototype.remove = function(position) {
   let current = this.head;
@@ -87,7 +87,7 @@ LinkedList.prototype.remove = function(position) {
   this._length--;
 
   return deletedNode;
-}
+};
 
 LinkedList.prototype.printOutData = function() {
   let current = this.head;
@@ -95,7 +95,7 @@ LinkedList.prototype.printOutData = function() {
     console.log(current.data);
     current = current.next;
   }
-}
+};
 
 module.exports = {
   LinkedList,
