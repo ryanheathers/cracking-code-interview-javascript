@@ -20,7 +20,7 @@ class Queue {
     }
     this.last = node;
     if (this.first === null) {
-      this.first === this.last;
+      this.first = this.last;
     }
   }
   remove() {
@@ -28,7 +28,7 @@ class Queue {
     let data = this.first.data;
     this.first = this.first.next;
     if (this.first === null) {
-      this.last === null;
+      this.last = null;
     }
     return data;
   }
