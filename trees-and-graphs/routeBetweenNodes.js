@@ -14,7 +14,6 @@ function routeBetweenNodes(start, end) {
     if (n.data === end) {
       return true;
     }
-    debugger;
 
     for (let edge of n.data.edges) {
       if (edge.visited === false) {
@@ -38,5 +37,3 @@ testGraph.addEdge(n1, n2);
 testGraph.addEdge(n2, n3);
 
 console.log(routeBetweenNodes(n1, n3));
-
-debugger;
