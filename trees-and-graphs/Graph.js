@@ -5,6 +5,7 @@ class Node {
   constructor(data) {
     this.data = data;
     this.edges = [];
+    this.visited = false;
   }
   addEdge(end) {
     this.edges.push(end);
@@ -18,6 +19,7 @@ class Graph {
   add(data) {
     const node = new Node(data);
     this.nodes.push(node);
+    return node;
   }
   addEdge(start, end) {
     const first = this.nodes.indexOf(start);
