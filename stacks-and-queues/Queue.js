@@ -25,16 +25,16 @@ class Queue {
   }
   remove() {
     if (this.first === null) throw new Error;
-    let data = this.first.data;
+    let node = this.first;
     this.first = this.first.next;
     if (this.first === null) {
       this.last = null;
     }
-    return data;
+    return node;
   }
   peek() {
     if (this.first === null) throw new Error;
-    return this.first.data;
+    return this.first;
   }
   isEmpty() {
     return this.first === null;

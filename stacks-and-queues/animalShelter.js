@@ -58,10 +58,10 @@ class AnimalShelter {
     }
   }
   dequeueDog() {
-    return this.dogs.remove();
+    return this.dogs.remove().data;
   }
   dequeueCat() {
-    return this.cats.remove();
+    return this.cats.remove().data;
   }
 }
 
