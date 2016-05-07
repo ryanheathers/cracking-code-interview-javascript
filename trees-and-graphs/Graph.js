@@ -60,6 +60,28 @@ class BinaryTree {
   constructor() {
     this.root = new BinaryNode(null);
   }
+  append(data) {
+    if (this.root.data === null) {
+      this.root.data = data;
+    }
+    else {
+      const current = this.root;
+      this.appendTo(current, data);
+    }
+  }
+  appendTo(current, data) {
+    if (current.left === null) {
+      current.left = new BinaryNode(data);
+    }
+    else if (current.right === null) {
+      current.right = new BinaryNode(data);
+    }
+    else {
+      let arr = [current.left, current.right];
+      let rand = Math.round(Math.random()); // randomly grab either a 0 or 1
+      this.appendTo(arr[rand], data);
+    }
+  }
   prettyPrint(node = this.root) {
     if (node.left !== null) {
       this.prettyPrint(node.left);
@@ -68,9 +90,6 @@ class BinaryTree {
     if (node.right !== null) {
       this.prettyPrint(node.right);
     }
-  }
-  append() {
-    // TODO
   }
 }
 
