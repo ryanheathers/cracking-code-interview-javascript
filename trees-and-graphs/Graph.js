@@ -58,11 +58,11 @@ class BinaryNode {
 
 class BinaryTree {
   constructor() {
-    this.root = new BinaryNode(null);
+    this.root = null;
   }
   append(data) {
-    if (this.root.data === null) {
-      this.root.data = data;
+    if (this.root === null) {
+      this.root = new BinaryNode(data);
     }
     else {
       const current = this.root;
