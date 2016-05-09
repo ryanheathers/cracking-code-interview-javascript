@@ -49,10 +49,11 @@ class Graph {
 }
 
 class BinaryNode {
-  constructor(data) {
+  constructor(data, parent = null) {
     this.data = data;
     this.left = null;
     this.right = null;
+    this.parent = parent;
   }
 }
 
@@ -71,10 +72,10 @@ class BinaryTree {
   }
   appendTo(current, data) {
     if (current.left === null) {
-      current.left = new BinaryNode(data);
+      current.left = new BinaryNode(data, current);
     }
     else if (current.right === null) {
-      current.right = new BinaryNode(data);
+      current.right = new BinaryNode(data, current);
     }
     else {
       let arr = [current.left, current.right];

@@ -1,7 +1,7 @@
 'use strict';
 const BinaryTree = require('./Graph').BinaryTree;
 
-function findSuccesor(node) {
+function findSuccessor(node) {
   if (node === null) return null;
 
   // if right child, traverse subtree
@@ -26,3 +26,12 @@ function findSuccesor(node) {
     return node;
   }
 }
+
+// TESTS
+let testTree = new BinaryTree();
+testTree.append(2);
+testTree.append(1);
+testTree.append(3);
+
+console.assert(findSuccessor(testTree.root.left).data === 2);
+console.assert(findSuccessor(testTree.root.right) === null);
