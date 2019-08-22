@@ -1,5 +1,5 @@
 'use strict';
-const Stack = require('./Stack').Stack;
+const Stack = require('../../data-structures/Stack').Stack;
 
 function sortStack(stack) {
   const otherStack = new Stack();
